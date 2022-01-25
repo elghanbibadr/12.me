@@ -81,3 +81,21 @@ p {
     font-size: 1.5rem;
   }
 }
+/* link */
+a {
+  text-decoration: none;
+}
+.link--tick {
+  color: var(--color-accent);
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.link--tick::after {
+  content: "->";
+}
+@media screen and (min-width: 768px) {
+  .link--tick {
+    font-size: 1.5rem;
+  }
+}
