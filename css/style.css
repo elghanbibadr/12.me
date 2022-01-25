@@ -125,9 +125,6 @@ a {
   background-color: var(--color-card);
   font-size: 2rem;
 }
-body {
-  background-color: var(--color-popularCard);
-}
 .badges--small {
   font-size: 1.6rem;
   padding-inline: 1rem;
@@ -145,4 +142,11 @@ body {
   .badges--small {
     font-size: 1.2rem;
   }
+}
+/* lists */
+ul {
+  list-style: none;
+}
+.list--blue {
+  color: var(--color-primary);
 }
