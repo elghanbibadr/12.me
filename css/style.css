@@ -99,3 +99,18 @@ a {
     font-size: 1.5rem;
   }
 }
+/* icon */
+.icon {
+  width: 5rem;
+  height: auto;
+}
+.icon--blue {
+  fill: var(--color-popularCard);
+}
+
+.icon-wrapper {
+  background-color: #f3f9fa;
+  display: inline-flex;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
