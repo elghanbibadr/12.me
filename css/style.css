@@ -114,3 +114,35 @@ a {
   padding: 1.5rem;
   border-radius: 50%;
 }
+/* 10%off component or badges */
+.badges {
+  color: white;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+}
+.badges--primary {
+  background-color: var(--color-card);
+  font-size: 2rem;
+}
+body {
+  background-color: var(--color-popularCard);
+}
+.badges--small {
+  font-size: 1.6rem;
+  padding-inline: 1rem;
+}
+.badge--small--lightenBlue {
+  background-color: #08c6e7;
+}
+.badge--small--darkenBlue {
+  background-color: #4595ff;
+}
+@media screen and (min-width: 768px) {
+  .badges--primary {
+    font-size: 1.5rem;
+  }
+  .badges--small {
+    font-size: 1.2rem;
+  }
+}
