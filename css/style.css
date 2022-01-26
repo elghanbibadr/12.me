@@ -8,6 +8,9 @@
   --color-popularCard: #2584ff;
   --border-radius: 30px;
 }
+* {
+  box-sizing: border-box;
+}
 html {
   font-size: 62.5%;
 }
@@ -119,7 +122,7 @@ a {
   color: white;
   border-radius: var(--border-radius);
   font-weight: 600;
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1.5rem;
 }
 .badges--primary {
   background-color: var(--color-card);
@@ -128,6 +131,7 @@ a {
 .badges--small {
   font-size: 1.6rem;
   padding-inline: 1rem;
+  margin-left: 1rem;
 }
 .badge--small--lightenBlue {
   background-color: #08c6e7;
@@ -146,6 +150,7 @@ a {
 /* lists */
 ul {
   list-style: none;
+  padding-left: 0;
 }
 .list--inline li {
   display: inline;
@@ -153,7 +158,7 @@ ul {
   font-size: 2rem;
 }
 .list--block li {
-  margin-block: 1rem;
+  margin-block: 1.5rem;
   font-size: 2.4rem;
 }
 .list--block li::before {
@@ -197,4 +202,39 @@ ul {
   font-size: 1.4rem;
   position: relative;
   bottom: 2px;
+}
+.card {
+  margin: 2rem;
+  border: 1px solid black;
+  width: 370px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card p {
+  margin-block: 0;
+}
+.card__header,
+.card__body,
+.card__footer {
+  padding: 2rem;
+}
+
+.card__header {
+  background-color: var(--color-card);
+  color: white;
+}
+
+.price__title {
+  display: inline-flex;
+  margin-block: 1rem;
+  color: white;
+}
+.header-title {
+  font-weight: bold;
+}
+.card__desc {
+  font-size: 2rem;
+}
+.card--popular .card__header {
+  background-color: var(--color-popularCard);
 }
