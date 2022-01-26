@@ -174,3 +174,27 @@ ul {
     font-size: 2rem;
   }
 }
+/* search input */
+.icon--search {
+  width: 1.8rem;
+  position: relative;
+  top: 0.4rem;
+}
+.search {
+  border-radius: var(--border-radius);
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  padding-left: 20px;
+}
+.input__search {
+  border: 0;
+  outline: 0;
+  font-size: 2rem;
+}
+.search__text {
+  font-size: 1.4rem;
+  position: relative;
+  bottom: 2px;
+}
