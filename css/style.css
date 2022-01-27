@@ -7,6 +7,7 @@
   --color-card: #00d9ff;
   --color-popularCard: #2584ff;
   --border-radius: 30px;
+  --border-radius-cards: 10px;
 }
 * {
   box-sizing: border-box;
@@ -208,8 +209,8 @@ ul {
   margin: 2rem;
   border: 1px solid black;
   width: 370px;
-  border-radius: 10px;
   overflow: hidden;
+  border-radius: var(--border-radius-cards);
 }
 .card p {
   margin-block: 0;
@@ -285,5 +286,36 @@ ul {
   }
   .icon--qoutes {
     left: 35rem;
+  }
+}
+/* callout */
+.callout {
+  background-color: var(--color-popularCard);
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: var(--border-radius-cards);
+}
+.callout__heading,
+.callout__text {
+  color: white;
+}
+.callout__heading {
+  margin-bottom: 0;
+}
+.callout__text {
+  margin-top: 1.3rem;
+}
+.btn--callout {
+  padding: 2rem 4rem;
+}
+.collout__btn {
+  align-self: center;
+}
+@media screen and (min-width: 768px) {
+  .callout {
+    grid-template-columns: 1fr auto;
+  }
+  .callout__content {
+    text-align: left;
   }
 }
