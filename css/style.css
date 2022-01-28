@@ -49,7 +49,7 @@ p {
     font-size: 2.4rem;
   }
   p {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 /* button */
@@ -101,7 +101,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .link--tick {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 /* icon */
@@ -116,7 +116,7 @@ a {
 .icon-wrapper {
   background-color: #f3f9fa;
   display: inline-flex;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 50%;
 }
 /* 10%off component or badges */
@@ -317,5 +317,32 @@ ul {
   }
   .callout__content {
     text-align: left;
+  }
+}
+/* featurs-body */
+.features {
+  padding-left: 1rem;
+  margin-top: 5rem;
+}
+.featurs__img {
+  width: 100%;
+  margin-top: 3rem;
+}
+.features .content__heading {
+  margin: 1rem 0 0 0;
+}
+.features .content__text {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .features__content {
+    margin-top: 4rem;
+  }
+  body {
+    padding-inline: 8rem;
+  }
+  .features .content__text {
+    line-height: 1.5;
   }
 }
