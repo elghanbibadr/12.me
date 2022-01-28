@@ -37,9 +37,12 @@ h2 {
 h3 {
   font-size: 3rem;
 }
+h4 {
+  font-size: 2.5rem;
+}
 p {
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
 }
 @media screen and (min-width: 768px) {
   h1 {
@@ -48,8 +51,11 @@ p {
   h3 {
     font-size: 2.4rem;
   }
+  h4 {
+    font-size: 2.2rem;
+  }
   p {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 /* button */
@@ -106,7 +112,7 @@ a {
 }
 /* icon */
 .icon {
-  width: 5rem;
+  width: 7rem;
   height: auto;
 }
 .icon--blue {
@@ -115,9 +121,9 @@ a {
 
 .icon-wrapper {
   background-color: #f3f9fa;
-  display: inline-flex;
-  padding: 1rem;
+  display: inline-block;
   border-radius: 50%;
+  padding: 0.8rem;
 }
 /* 10%off component or badges */
 .badges {
@@ -169,6 +175,10 @@ ul {
   font-size: 2.5rem;
   margin-right: 5px;
 }
+.list--blue li {
+  color: #1b0760;
+  font-weight: 600;
+}
 
 @media screen and (min-width: 768px) {
   .list--block li {
@@ -200,10 +210,16 @@ ul {
   outline: 0;
   font-size: 2rem;
 }
+
 .search__text {
   font-size: 1.4rem;
   position: relative;
   bottom: 2px;
+}
+@media screen and (min-width: 768px) {
+  .search {
+    justify-content: space-around;
+  }
 }
 .card {
   margin: 2rem;
@@ -339,10 +355,71 @@ ul {
   .features__content {
     margin-top: 4rem;
   }
-  body {
-    padding-inline: 8rem;
-  }
+
   .features .content__text {
     line-height: 1.5;
+  }
+}
+/* description (include search component) */
+.desc {
+  text-align: center;
+}
+.desc__heading {
+  margin-bottom: 0;
+}
+.desc__list {
+  margin-top: 3rem;
+}
+
+.list-row1 {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .btn__desc {
+    padding-inline: 4rem;
+  }
+  .desc__list ul {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .desc__list {
+    margin-left: 7rem;
+  }
+}
+/* showcase */
+.showcase {
+  background-color: black;
+  padding: 4rem 2rem;
+  margin: 0;
+}
+
+.showcase__features {
+  display: flex;
+}
+.showcase__title {
+  color: white;
+  text-align: center;
+}
+.icon__showcase {
+  width: 4rem;
+  margin-right: 1.5rem;
+  margin-top: 3rem;
+}
+
+.showcase__heading {
+  color: white;
+  margin-bottom: 0;
+}
+.showcase__text {
+  margin-top: 1rem;
+}
+.showcase__img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .showcase {
+    padding-inline: 0;
   }
 }
