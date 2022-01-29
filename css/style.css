@@ -20,6 +20,7 @@ body {
   color: var(--color-body);
   padding: 1rem;
   background-color: #fcfbf9;
+  cursor: pointer;
 }
 h1,
 h2,
@@ -118,6 +119,9 @@ a {
 .icon--blue {
   fill: var(--color-popularCard);
 }
+.icon--white {
+  width: 5rem;
+}
 
 .icon-wrapper {
   background-color: #f3f9fa;
@@ -169,7 +173,7 @@ ul {
   margin-block: 1.5rem;
   font-size: 2.4rem;
 }
-.list--block li::before {
+.card .list--block li::before {
   content: " \221A";
   color: #2dd5a7;
   font-size: 2.5rem;
@@ -179,10 +183,13 @@ ul {
   color: #1b0760;
   font-weight: 600;
 }
+.list--footer {
+  color: #aaa;
+}
 
 @media screen and (min-width: 768px) {
   .list--block li {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .list--inline li {
     font-size: 1.6rem;
@@ -267,6 +274,9 @@ ul {
   }
   .grid--cols3 {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .grid--cols5 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 /* testimonial */
@@ -422,4 +432,68 @@ ul {
   .showcase {
     padding-inline: 0;
   }
+}
+/* collapsible*/
+.collapsible {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.collapsible__content {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+}
+
+.icon--chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.5s;
+}
+.collapsible--expanded .icon--chevron {
+  transform: rotate(0);
+}
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+}
+@media screen and (min-width: 768px) {
+  .icon--collapsible {
+    display: none;
+  }
+  .collapsible__content {
+    max-height: 100vh;
+  }
+}
+/* footer */
+.footer {
+  background-color: #232323;
+  padding: 7rem 4rem 3rem;
+}
+.footer h2 {
+  color: white;
+  font-weight: 600;
+  margin: 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.footer__logo {
+  text-align: center;
+}
+.footer__content {
+  border-bottom: 0.2px solid rgba(255, 255, 255, 0.418);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__content {
+    border: 0;
+  }
+  .footer h2 {
+    font-size: 2rem;
+  }
+  .footer__logo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  /*in the end we gonne addd a padding inline general to all the genral component footer and body and nav  */
 }
