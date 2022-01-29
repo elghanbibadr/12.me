@@ -18,7 +18,7 @@ html {
 body {
   font-family: "Inter", sans-serif;
   color: var(--color-body);
-  padding: 1rem;
+  padding: 0rem;
   background-color: #fcfbf9;
   cursor: pointer;
 }
@@ -121,6 +121,7 @@ a {
 }
 .icon--white {
   width: 5rem;
+  fill: white;
 }
 
 .icon-wrapper {
@@ -404,6 +405,10 @@ ul {
   padding: 4rem 2rem;
   margin: 0;
 }
+/* this is alone  */
+.content {
+  text-align: center;
+}
 
 .showcase__features {
   display: flex;
@@ -462,6 +467,35 @@ ul {
   }
   .collapsible__content {
     max-height: 100vh;
+  }
+}
+/* navigation menu */
+.nav {
+  background-color: black;
+  padding-left: 2rem;
+}
+.hero {
+  text-align: center;
+}
+.hero__heading {
+  color: white;
+  font-size: 6rem;
+}
+.hero__img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    flex-wrap: nowrap;
+  }
+  .list__nav li {
+    display: inline;
+    margin-inline: 1rem;
+  }
+  .hero__content {
+    align-self: center;
+    text-align: left;
   }
 }
 /* footer */
