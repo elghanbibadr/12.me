@@ -19,7 +19,7 @@ body {
   font-family: "Inter", sans-serif;
   color: var(--color-body);
   padding: 0rem;
-  background-color: #fcfbf9;
+  background-color: #ffffffce;
   cursor: pointer;
 }
 h1,
@@ -30,33 +30,33 @@ h4 {
   font-weight: bold;
 }
 h1 {
-  font-size: 7rem;
+  font-size: 6rem;
 }
 h2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 h4 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 p {
   font-weight: 400;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
 }
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 8rem;
+    font-size: 7.5rem;
   }
   h3 {
-    font-size: 2.4rem;
-  }
-  h4 {
     font-size: 2.2rem;
   }
+  h4 {
+    font-size: 2rem;
+  }
   p {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 /* button */
@@ -67,15 +67,20 @@ p {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 1.8rem;
+  transition: 0.3s;
 }
 .btn--orange {
   background-color: var(--color-accent);
   color: white;
 }
+.btn--orange:hover {
+  background-color: #e93406;
+}
 .btn--transparent {
   background-color: transparent;
   color: var(--color-primary);
   border: 1px solid var(--color-primary);
+  transition: 0.7s;
 }
 .btn--blue {
   background-color: var(--color-primary);
@@ -87,6 +92,9 @@ p {
 .btn--lightBlue {
   background-color: var(--color-card);
   color: white;
+}
+.btn--lightBlue:hover {
+  background-color: #02c0e2;
 }
 @media screen and (min-width: 768px) {
   .btn {
@@ -105,6 +113,10 @@ a {
 }
 .link--tick::after {
   content: "->";
+  transition: margin 0.4s;
+}
+.link--tick:hover::after {
+  margin: 6px;
 }
 @media screen and (min-width: 768px) {
   .link--tick {
@@ -231,10 +243,11 @@ ul {
 }
 .card {
   margin: 2rem;
-  border: 1px solid black;
-  width: 370px;
+  width: 380px;
+  margin: 8rem auto;
   overflow: hidden;
   border-radius: var(--border-radius-cards);
+  transition: 0.5s;
 }
 .card p {
   margin-block: 0;
@@ -261,8 +274,23 @@ ul {
 .card__desc {
   font-size: 2rem;
 }
+.btn--transparent:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
 .card--popular .card__header {
   background-color: var(--color-popularCard);
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 100%;
+    margin-inline: 2rem;
+  }
+  .card:hover {
+    transform: scale(1.1);
+  }
 }
 /* grid */
 @media screen and (min-width: 768px) {
@@ -286,6 +314,7 @@ ul {
   margin-top: 1rem;
   padding: 3rem;
   position: relative;
+  margin-inline: 1rem;
 }
 .img__testimonial {
   width: 100%;
@@ -296,6 +325,10 @@ ul {
 }
 .author-post {
   font-size: 1.8rem;
+  margin-top: 0;
+}
+.testimonial__content {
+  margin: 4rem 0 0 3rem;
 }
 .icon--qoutes {
   background-color: var(--color-accent);
@@ -315,12 +348,14 @@ ul {
     left: 35rem;
   }
 }
+
 /* callout */
 .callout {
   background-color: var(--color-popularCard);
   text-align: center;
   padding: 3rem 2rem;
   border-radius: var(--border-radius-cards);
+  margin-top: 5rem;
 }
 .callout__heading,
 .callout__text {
@@ -328,6 +363,7 @@ ul {
 }
 .callout__heading {
   margin-bottom: 0;
+  font-size: 3rem;
 }
 .callout__text {
   margin-top: 1.3rem;
@@ -341,6 +377,11 @@ ul {
 @media screen and (min-width: 768px) {
   .callout {
     grid-template-columns: 1fr auto;
+    position: relative;
+    top: 3.8rem;
+  }
+  .callout__heading {
+    font-size: 2.5rem;
   }
   .callout__content {
     text-align: left;
@@ -374,6 +415,7 @@ ul {
 /* description (include search component) */
 .desc {
   text-align: center;
+  margin-top: 7rem;
 }
 .desc__heading {
   margin-bottom: 0;
@@ -403,11 +445,14 @@ ul {
 .showcase {
   background-color: black;
   padding: 4rem 2rem;
-  margin: 0;
+  margin: 10rem 0;
 }
 /* this is alone  */
 .content {
   text-align: center;
+}
+.content h2 {
+  margin-bottom: 0;
 }
 
 .showcase__features {
@@ -467,14 +512,19 @@ ul {
   }
   .collapsible__content {
     max-height: 100vh;
+    width: auto;
   }
 }
 /* navigation menu */
 .nav {
   background-color: black;
   padding-left: 2rem;
+  padding: 0.5rem 1rem;
 }
 .hero {
+  text-align: center;
+}
+.list__nav {
   text-align: center;
 }
 .hero__heading {
@@ -484,6 +534,20 @@ ul {
 .hero__img {
   width: 100%;
 }
+.hero__content {
+  margin-left: 4rem;
+}
+.hero svg {
+  fill: white;
+}
+.list__nav li {
+  margin-block: 3rem;
+  color: #ccc;
+  transition: color 0.3s;
+}
+.list__nav li:hover {
+  color: white;
+}
 
 @media screen and (min-width: 768px) {
   .nav {
@@ -491,7 +555,7 @@ ul {
   }
   .list__nav li {
     display: inline;
-    margin-inline: 1rem;
+    margin-inline: 2rem;
   }
   .hero__content {
     align-self: center;
@@ -518,9 +582,23 @@ ul {
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
+.features,
+.callout,
+.desc,
+.testimonial {
+  margin-inline: 1rem;
+}
 @media screen and (min-width: 768px) {
   .footer__content {
     border: 0;
+  }
+  /* alone */
+  .features,
+  .callout,
+  .desc,
+  .testimonial,
+  .container {
+    margin-inline: 10rem;
   }
   .footer h2 {
     font-size: 2rem;
@@ -530,4 +608,35 @@ ul {
     grid-row: 1;
   }
   /*in the end we gonne addd a padding inline general to all the genral component footer and body and nav  */
+}
+/* fixing missing */
+/* this is alone  */
+.icon__showcase--small {
+  width: 4.7rem;
+}
+.content {
+  text-align: center;
+}
+.content h2 {
+  margin-bottom: 0;
+}
+.content p {
+  margin-top: 1rem;
+}
+nav li,
+footer li:hover {
+  color: white;
+  transition: color 0.4s;
+}
+.desc__text {
+  margin-bottom: 4rem;
+}
+.list-row2 li {
+  margin-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .desc__list {
+    position: relative;
+    left: 5rem;
+  }
 }
